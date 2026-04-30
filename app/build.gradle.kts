@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.24"
 }
+
 
 android {
     namespace = "com.pmd01.parcial01_orderup"
@@ -47,7 +49,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.coil.compose)
-    implementation(libs.coil.network.okhttp)
+    implementation("io.coil-kt:coil-compose:2.5.0")
+    implementation("androidx.compose.runtime:runtime-saveable:1.6.4")
+    implementation("androidx.navigation3:navigation3-runtime:1.0.0-alpha04")
+    implementation("androidx.navigation3:navigation3-ui:1.0.0-alpha04")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
